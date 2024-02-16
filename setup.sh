@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ ! -d "/opt/SecureCTF"]]
+if [[ ! -d "/opt/SecureCTF" ]]
 then
     mkdir /opt/SecureCTF
     # cloning the repo
