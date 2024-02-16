@@ -1,7 +1,12 @@
 #!/bin/bash
 
-# cloning the repo
-git clone https://github.com/Avichiii/SecureCTF /opt/SecureCTF || exit 1
+if [[ ! -d "/opt/SecureCTF"]]
+then
+    mkdir /opt/SecureCTF
+    # cloning the repo
+    git clone https://github.com/Avichiii/SecureCTF /opt/SecureCTF || exit 1
+fi
+
 
 cd /opt/SecureCTF || exit 1
 
