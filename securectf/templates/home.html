@@ -22,9 +22,9 @@
             Explore Hundreds of Challenges that are available on our Plateform.
         </p>
 
-        <a class="btn home-banner-button btn-outline" href="{{ url_for('login') }}">Explore Now ➞</a>
+        <a class="btn home-banner-buttons btn-outline" href="{{ url_for('login') }}">Explore Now ➞</a>
 
-        {% for br in range(3) %}
+        {% for br in range(5) %}
             <br>
         {% endfor %}
 
@@ -32,20 +32,25 @@
         <br>
         <p>Learn Cyber Security by Playing CTF</p>
 
-        {% for br in range(6) %}
+        {% for br in range(9) %}
             <br>
         {% endfor %}
 
+    </div>
+
+    <div class="mr-3 ml-3">
         <!-- boxes -->
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4 mb-4">
                 <div style="margin-bottom: 30px" class="card text-center home-boxes card-wrapper">
                     <div class="card-body">
                         <h5 class="card-title"><strong>Various Challenges</strong></h5>
-                        {% for br in range(7) %}
+                        <br>
+                        <p>here you can find different types of challenges</p>
+                        {% for br in range(13) %}
                         <br>
                         {% endfor %}
-                            <a class="btn home-banner-button btn-outline" href="{{ url_for('ctf') }}">Find Now ➞</a>
+                            <a class="btn home-banner-buttons btn-outline" href="{{ url_for('ctf') }}">Find Now ➞</a>
                     </div>
                 </div>
             </div>
@@ -53,10 +58,12 @@
                 <div style="margin-bottom: 30px" class="card text-center home-boxes card-wrapper">
                     <div class="card-body">
                         <h5 class="card-title"><strong>Hacker's Forum</strong></h5>
-                        {% for br in range(7) %}
+                        <br>
+                        <p>Network with thousands of cyber security personals & boost your skills</p>
+                        {% for br in range(12) %}
                         <br>
                         {% endfor %}
-                            <a class="btn home-banner-button btn-outline" href="{{ url_for('forum') }}">Find Now ➞</a>
+                            <a class="btn home-banner-buttons btn-outline" href="{{ url_for('forum') }}">Find Now ➞</a>
                     </div>
                 </div>
             </div>
@@ -64,16 +71,17 @@
                 <div style="margin-bottom: 30px" class="card text-center home-boxes card-wrapper">
                     <div class="card-body">
                         <h5 class="card-title"><strong>Community Support</strong></h5>
-                        {% for br in range(7) %}
+                        <br>
+                        <p>Here you can find community solutions posted by professionals and community members</p>
+                        {% for br in range(12) %}
                         <br>
                         {% endfor %}
-                            <a class="btn home-banner-button btn-outline" href="{{ url_for('community') }}">ClicFind Now ➞</a>
+                            <a class="btn home-banner-buttons btn-outline" href="{{ url_for('community') }}">ClicFind Now ➞</a>
                     </div>
                 </div>
             </div>
         </div>
 
-
-
     </div>
+    
 {% endblock %}

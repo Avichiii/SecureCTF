@@ -12,15 +12,16 @@ body {
 }
 
 .home-banner {
-    margin-top: 70px;
+    margin-top: 90px;
 }
 .home-banner-paragraph {
     margin-top: 50px;
 }
-.home-banner-button {
+.home-banner-buttons {
     margin-top: 50px;
     background-color: #9fef00;
 }
 .home-boxes {
     background-color: #141d2b;
+
 }
