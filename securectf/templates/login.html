@@ -1,3 +1,31 @@
 {% extends 'base.html' %}
 
 {% block title %} Login Page{% endblock %}
+
+{% block content %}
+
+<div class="centered">
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div style="margin-bottom: 30px" class="card-custom card-wrapper-custom">
+                <div class="card-body">
+                    <form action="POST"></form>
+                        {{ form.hidden_tag() }}
+                        <h3 class="card-title"><strong>Login</strong></h3>
+                        <p style="color: #808080">Login to your account</p>
+                        <br>
+                        
+                        {{ form.email(class="form-control-custom", placeholder="Email") }}
+                        
+                        {{ form.password(class="form-control-custom", placeholder="Password") }}
+                        <br>
+                        {{ form.submit(id="submit-btn")}}
+          
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

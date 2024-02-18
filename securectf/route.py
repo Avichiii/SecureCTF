@@ -1,5 +1,6 @@
-from flask import render_template
+from flask import render_template, request
 from securectf import app
+from securectf.form import Login, Register
 
 
 @app.route('/')
@@ -8,13 +9,23 @@ def home():
     return render_template('home.html')
 
 
-@app.route('/signup')
+@app.route('/signup', methods=['GET', 'POST'])
 def signup():
-    return render_template('signup.html')
+    form = Register()
+    if request.method == 'POST':
+        if form.validate_on_submit():
+            pass
+    if request.method == 'GET':
+        return render_template('signup.html', form=form)
 
-@app.route('/login')
+@app.route('/login', methods=['GET', 'POST'])
 def login():
-    return render_template('login.html')
+    form = Login()
+    if request.method == 'POST':
+        if form.validate_on_submit():
+            pass
+    if request.method == 'GET':
+        return render_template('login.html', form=form)
 
 @app.route('/ctf')
 def ctf():
