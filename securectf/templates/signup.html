@@ -4,7 +4,12 @@
 
 {% block content %}
 
+
 <div class="centered">
+    {% for _ in range(3) %}
+        <br>
+    {% endfor %}
+    
     <div class="row", style="border-radius: 10px;">
         <div class="col-md-4 mb-4">
             <div style="margin-bottom: 30px" class="card-custom card-wrapper-custom">
@@ -14,7 +19,7 @@
                         <h3 class="card-title"><strong>SignUp</strong></h3>
                         <p style="color: #808080">Register your account</p>
                         <br>
-                        
+
                         {{ form.username(class="form-control-custom", placeholder="User Name")}}
                         
                         {{ form.email(class="form-control-custom", placeholder="Email") }}
