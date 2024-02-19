@@ -1,4 +1,4 @@
-from flask import render_template, request
+from flask import redirect, render_template, request, flash, url_for
 from securectf import app
 from securectf.form import Login, Register
 
@@ -14,7 +14,9 @@ def signup():
     form = Register()
     if request.method == 'POST':
         if form.validate_on_submit():
-            pass
+            flash("User has been successfully registered!")
+            return redirect(url_for('signup'))
+
     if request.method == 'GET':
         return render_template('signup.html', form=form)
 
@@ -23,7 +25,9 @@ def login():
     form = Login()
     if request.method == 'POST':
         if form.validate_on_submit():
-            pass
+            flash("User has been successfully logged in!")
+            return redirect(url_for('login'))
+        
     if request.method == 'GET':
         return render_template('login.html', form=form)
 

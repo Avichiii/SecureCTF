@@ -42,6 +42,14 @@
     <!-- home banner -->
     {% endblock %}
 
+    <!-- Flashing Messages -->
+    {% with messages = get_flashed_messages(with_categories=True) %}
+      {% if messages %}
+        {% for message in messages %}
+          {{ message[1] }}
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
 
     <!-- adds random square blocks to the background -->
     <div class="small-box" style="top: 20%; left: 20%;"></div>
