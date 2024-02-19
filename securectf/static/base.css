@@ -1,0 +1,14 @@
+/* Base Page */
+
+body {
+    background-color: #171924;
+    color: white;
+}
+
+.small-box {
+    width: 40px;
+    height: 40px;
+    background-color: #161f2d;
+    position: absolute;
+    z-index: -1; /* makes the squares behind ohter contents */
+}
