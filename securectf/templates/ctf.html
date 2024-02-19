@@ -1,3 +1,10 @@
 {% extends 'base.html' %}
 
 {% block title %} CTF Page {% endblock %}
+
+
+{% block rightnavbar %}
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('logout') }}">Log out</a>
+    </li>
+{% endblock %}

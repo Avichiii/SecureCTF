@@ -1,5 +1,11 @@
-from securectf import db
+from operator import length_hint
+from securectf import db, login_manager
 from flask_login import UserMixin
+from securectf import bcrypt
+
+@login_manager.user_loader
+def load_user(user_id):
+    return Users.query.get(int(user_id))
 
 # connector table for users / ctfchallenges
 ctfuser = db.Table('ctfuser',
@@ -12,9 +18,19 @@ class Users(db.Model, UserMixin):
     id = db.Column(db.Integer(), primary_key=True)
     username = db.Column(db.String(length=30), nullable=False, unique=True)
     email = db.Column(db.String(length=50), nullable=False, unique=True)
-    password = db.Column(db.String(length=50), nullable=False)
+    password_hash = db.Column(db.String(length=50), nullable=False)
     completed_challenges = db.relationship('Ctf', secondary=ctfuser, backref='pawned_challenges', lazy=True)
 
+    @property
+    def password(self):
+        return self.password_hash
+
+    @password.setter
+    def password(self, plaintext_password):
+        self.password_hash = bcrypt.generate_password_hash(plaintext_password).decode('utf-8')
+
+    def check_password(self, attempted_password):
+        bcrypt.check_password_hash(self.password, attempted_password)
 
     def __str__(self) -> str:
         return f'User: {self.username}'
