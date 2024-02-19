@@ -14,6 +14,7 @@ def signup():
     form = Register()
     if request.method == 'POST':
         if form.validate_on_submit():
+            
             flash("User has been successfully registered!")
             return redirect(url_for('signup'))
 
