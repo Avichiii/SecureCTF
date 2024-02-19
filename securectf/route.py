@@ -15,20 +15,27 @@ def signup():
     form = Register()
     if request.method == 'POST':
         if form.validate_on_submit():
-            user_signup = Users(
-                username=form.username.data,
-                email=form.email.data,
-                # password is setter function
-                password=form.password.data
-            )
+            user = Users.query.filter_by(username=form.username.data).first()
             
-            db.session.add(user_signup)
-            db.session.commit()
-            login_user(user_signup)
+            if not user:
+                user_signup = Users(
+                    username=form.username.data,
+                    email=form.email.data,
+                    # password is setter function
+                    password=form.password.data
+                )
+                
+                db.session.add(user_signup)
+                db.session.commit()
+                login_user(user_signup)
 
-            flash("User has been successfully registered!")
-            return redirect(url_for('ctf'))
-
+                flash("User has been successfully registered!")
+                return redirect(url_for('ctf'))
+            
+            else:
+                flash('User Name already exists!')
+                return redirect(url_for('signup'))
+        
     if request.method == 'GET':
         return render_template('signup.html', form=form)
 
@@ -37,9 +44,9 @@ def login():
     form = Login()
     if request.method == 'POST':
         if form.validate_on_submit():
-            attempted_user = Users.query.filter_by(username=form.email.data).first()
+            attempted_user = Users.query.filter_by(email=form.email.data).first()
 
-            if attempted_user and attempted_user.check_password(attempted_user=form.password.data):
+            if attempted_user and attempted_user.check_password(attempted_password=form.password.data):
                 login_user(attempted_user)
                 flash("User has been successfully logged in!")
                 return redirect(url_for('ctf'))

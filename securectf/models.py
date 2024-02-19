@@ -30,7 +30,7 @@ class Users(db.Model, UserMixin):
         self.password_hash = bcrypt.generate_password_hash(plaintext_password).decode('utf-8')
 
     def check_password(self, attempted_password):
-        bcrypt.check_password_hash(self.password, attempted_password)
+        return bcrypt.check_password_hash(self.password_hash, attempted_password)
 
     def __str__(self) -> str:
         return f'User: {self.username}'
