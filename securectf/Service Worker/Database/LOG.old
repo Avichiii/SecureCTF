@@ -1,2 +1,3 @@
-2024/02/20-06:40:20.755 20ac Creating DB /root/Pictures/SecureCTF/securectf/Service Worker/Database since it was missing.
-2024/02/20-06:40:20.775 20ac Reusing MANIFEST /root/Pictures/SecureCTF/securectf/Service Worker/Database/MANIFEST-000001
+2024/02/20-08:30:16.929 e23 Reusing MANIFEST /root/Pictures/SecureCTF/securectf/Service Worker/Database/MANIFEST-000001
+2024/02/20-08:30:16.930 e23 Recovering log #3
+2024/02/20-08:30:16.938 e23 Reusing old log /root/Pictures/SecureCTF/securectf/Service Worker/Database/000003.log 
