@@ -1,0 +1,294 @@
+/* Base Page */
+
+body {
+    background-color: #171924;
+    color: white;
+}
+
+.small-box {
+    width: 40px;
+    height: 40px;
+    background-color: #161f2d;
+    position: absolute;
+    z-index: -1; /* makes the squares behind ohter contents */
+}
+
+/* Home Page */
+
+.home-banner {
+    margin-top: 90px;
+}
+.home-banner-paragraph {
+    margin-top: 50px;
+}
+.home-banner-buttons {
+    margin-top: 50px;
+    background-color: #9fef00;
+}
+.home-boxes {
+    background-color: #141d2b;
+
+}
+
+/* Login | Signup Pages */
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Larger card */
+.card-wrapper-custom {
+    width: 500px; /* Set the width to whatever you want */
+    margin: auto; /* Center the card */
+}
+
+.card-custom {
+    padding: 20px;
+    font-size: 18px;
+    background-color: #1a2332;
+    border-radius: 10px;
+
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.form-control-custom {
+    border: none;
+    height: 60px;
+    background-color: #121926;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-clip: padding-box;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+/* Change the placeholder text color to white */
+.form-control-custom::placeholder {
+    color: #808080;
+}
+
+#submit-btn {
+    float: left;
+    width: 150px; /* Change the width as needed */
+    height: 50px; /* Change the height as needed */
+    background-color: #14ae5c; /* Change the color as needed */
+    color: #ffffff; /* Change the color of the text as needed */
+    border-radius: 6px;
+    border: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CTF Page CSS */
+.first_con{
+    margin-top: 80px;
+}
+.first_heading{
+    font-size: 42px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.fisrt_para{
+    font-size: 17px;
+    text-align: center;
+    margin-top: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #7594bd;
+}
+.fisrt_para label{
+    font-size: 15px;
+}
+
+.first_heading label{
+    color: #9fef00;
+    font-style: oblique;
+}
+ 
+.second_txt{
+    text-align: center;
+    margin-top: 95px;
+}
+
+.second_txt label{
+    color: #9fef00;
+}
+
+
+
+/* Sidebar CSS */
+
+.sidebar {
+    position: fixed;
+    top: 41%;
+    bottom: 0;
+    left: 0;
+    width: 18%;
+    background-color: #14202e;
+    color: #a5a7ab;
+}
+.category-heading {
+    background-color: #244368;
+    color: #a5a7ab;
+    padding: 13px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.category {
+    background-color: #121926;
+    color: #a5a7ab;
+    padding: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Challenges Box CSS */
+
+.container_challenges{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    left: -3%;
+    margin-top: 50px;
+    width: 70%;
+}
+.box {
+    width: 450px; /* Increased width */
+    height: 260px;
+    background-color: #1b2f4a;
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    left: 34%;
+}
+.box1{
+    width: 450px; /* Increased width */
+    height: 260px;
+    background-color: #1b2f4a;
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    left: 38%;
+}
+.box2{
+    width: 450px; /* Increased width */
+    height: 260px;
+    background-color: #1b2f4a;
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    left: 42%;
+}
+.catagory {
+    font-size: 14px; /* Small text */
+    position: absolute; /* Positioned in the top left corner */
+    top: 10px;
+    left: 15px;
+}
+.points {
+    font-size: 14px; /* Small text */
+    position: absolute; /* Positioned in the top right corner */
+    top: 10px;
+    right: 13px;
+}
+.challenge_name {
+    font-size: 26px; /* Large text */
+    margin-bottom: 20px;
+    margin-top: 43px;
+    font-weight: bold;
+}
+.diff{
+    margin-top: -19px;
+    margin-bottom: 23px;
+}
+.start-button {
+    background-color: #9fef00;
+    color: #000000;
+    border: none;
+    padding: 7px 25px;
+    border-radius: 2.5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.start-button:hover {
+    background-color: #7ab800;
+}
+.author {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

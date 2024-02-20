@@ -1,0 +1,17 @@
+2024-02-19 10:42:19.988 [info] Started local extension host with pid 87770.
+2024-02-19 10:42:25.593 [info] [perf] Render performance baseline is 83ms
+2024-02-19 12:21:47.897 [error] There are no commenting ranges at the current position.: Error: There are no commenting ranges at the current position.
+    at z.addCommentAtLine (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2116:2556)
+    at z.addOrToggleCommentAtLine (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2116:2087)
+    at z.Z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2116:1793)
+    at a.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2115:20551)
+    at K.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at K.z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1972)
+    at K.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2188)
+    at K.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:756:19613)
+    at Wb.he.onMouseUp (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:756:17939)
+    at S.emitMouseUp (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:95:39861)
+    at T.emitMouseUp (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:693:41151)
+    at b.F (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:731:14781)
+    at vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:731:12419
+    at HTMLDivElement.<anonymous> (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:726:30999)
