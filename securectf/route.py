@@ -81,5 +81,5 @@ def community():
 
 @app.route('/users')
 @login_required
-def user():
+def users():
     return render_template('userprofile.html')
