@@ -1,0 +1,162 @@
+/* CTF Page CSS */
+.first_con{
+    margin-top: 80px;
+}
+.first_heading{
+    font-size: 42px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.fisrt_para{
+    font-size: 17px;
+    text-align: center;
+    margin-top: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #7594bd;
+}
+.fisrt_para label{
+    font-size: 15px;
+}
+
+.first_heading label{
+    color: #9fef00;
+    font-style: oblique;
+}
+ 
+.second_txt{
+    text-align: center;
+    margin-top: 95px;
+}
+
+.second_txt label{
+    color: #9fef00;
+}
+
+
+
+/* Sidebar CSS */
+
+
+.sidebar {
+    position: fixed;
+    top: 41%;
+    bottom: 0;
+    left: 0;
+    width: 18%;
+    background-color: #14202e;
+    color: #a5a7ab;
+    z-index: 1;
+}
+
+
+.category-heading {
+    background-color: #244368;
+    color: #a5a7ab;
+    padding: 13px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.category {
+    background-color: #121926;
+    color: #a5a7ab;
+    padding: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.category:hover{
+    color: #9fef00;
+
+} 
+
+/* Challenges Box CSS */
+
+
+.container_challenges{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    left: -3%;
+    margin-top: 50px;
+    width: 70%;
+}
+
+
+.box {
+    width: 450px; /* Increased width */
+    height: 260px;
+    background-color: #1b2f4a;
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    left: 34%;
+}
+.box1{
+    width: 450px; /* Increased width */
+    height: 260px;
+    background-color: #1b2f4a;
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    left: 38%;
+}
+.box2{
+    width: 450px; /* Increased width */
+    height: 260px;
+    background-color: #1b2f4a;
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    left: 42%;
+}
+.catagory {
+    font-size: 14px; /* Small text */
+    position: absolute; /* Positioned in the top left corner */
+    top: 10px;
+    left: 15px;
+}
+.points {
+    font-size: 14px; /* Small text */
+    position: absolute; /* Positioned in the top right corner */
+    top: 10px;
+    right: 13px;
+}
+.challenge_name {
+    font-size: 26px; /* Large text */
+    margin-bottom: 20px;
+    margin-top: 43px;
+    font-weight: bold;
+}
+.diff{
+    margin-top: -19px;
+    margin-bottom: 23px;
+}
+.start-button {
+    background-color: #9fef00;
+    color: #000000;
+    border: none;
+    padding: 7px 25px;
+    border-radius: 2.5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.start-button:hover {
+    background-color: #7ab800;
+}
+.author {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}

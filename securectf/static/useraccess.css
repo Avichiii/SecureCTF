@@ -51,7 +51,7 @@
 
 /* Change the placeholder text color to white */
 .form-control-custom::placeholder {
-    color: #808080;
+    color: #ffffff;
 }
 
 #submit-btn {
@@ -63,3 +63,26 @@
     border-radius: 6px;
     border: 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
