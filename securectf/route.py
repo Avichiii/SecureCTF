@@ -77,3 +77,9 @@ def forum():
 @login_required
 def community():
     return render_template('community.html')
+
+
+@app.route('/users')
+@login_required
+def user():
+    return render_template('userprofile.html')
