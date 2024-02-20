@@ -1,0 +1,27 @@
+2024-02-20 06:40:21.880 [info] Extension host with pid 8546 started
+2024-02-20 06:40:22.508 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2024-02-20 06:40:22.662 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2024-02-20 06:40:23.159 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2024-02-20 06:40:23.611 [info] Eager extensions activated
+2024-02-20 06:40:23.801 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2024-02-20 06:40:23.831 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2024-02-20 06:40:23.907 [info] ExtensionService#_doActivateExtension ritwickdey.LiveServer, startup: false, activationEvent: 'onStartupFinished'
+2024-02-20 06:40:24.774 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-02-20 06:40:24.975 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-02-20 06:40:25.174 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2024-02-20 06:40:44.567 [info] Extension host terminating: renderer closed the MessagePort
+2024-02-20 06:40:44.631 [info] Extension host with pid 8546 exiting with code 0
+2024-02-20 06:40:48.090 [info] Extension host with pid 9000 started
+2024-02-20 06:40:48.090 [info] Skipping acquiring lock for /root/Pictures/SecureCTF/securectf/User/workspaceStorage/289feffe3dd13e3a39407e0814c87139.
+2024-02-20 06:40:48.323 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*'
+2024-02-20 06:40:48.375 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2024-02-20 06:40:48.495 [info] Eager extensions activated
+2024-02-20 06:40:48.784 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2024-02-20 06:40:48.793 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2024-02-20 06:40:53.648 [info] ExtensionService#_doActivateExtension vscode.git, startup: false, activationEvent: 'api', root cause: vscode.github
+2024-02-20 06:40:53.904 [info] ExtensionService#_doActivateExtension ritwickdey.LiveServer, startup: false, activationEvent: 'onStartupFinished'
+2024-02-20 06:41:36.172 [info] ExtensionService#_doActivateExtension vscode.html-language-features, startup: false, activationEvent: 'onLanguage:html'
+2024-02-20 06:41:36.343 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2024-02-20 06:41:59.215 [info] ExtensionService#_doActivateExtension vscode.css-language-features, startup: false, activationEvent: 'onLanguage:css'
+2024-02-20 06:56:37.550 [info] Extension host terminating: renderer closed the MessagePort
+2024-02-20 06:56:37.774 [info] Extension host with pid 9000 exiting with code 0
