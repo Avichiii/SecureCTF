@@ -1,14 +1,23 @@
 #!/bin/bash
+
+sudo -l
+if [[ $? -ne 0 ]]
+then
+    echo "you need sudo previlage"
+    exit 1
+fi
+
 if [[ -d "~.vscode-root" ]]
 then 
-    git rm -rf --cached .vscode-root
-    rm -rf ~.vscode-root
+    sudo git rm -rf --cached .vscode-root
+    sudo rm -rf ~.vscode-root
 else
-    removeList=("*Cache*" logs Dictionaries databases "Service Worker" User "*Storage*" "*Cookies*" "*Trust*" Preferences "Network*" Crashpad)
+    removeList=("*Cache*" "logs" "*Dict*" "databases" "Service Worker" "User" "*Storage*" "*Cookies*" "*Trust*" "Preferences" "*Network*" "Crashpad" "*Transport*" machineid)
     for del in ${removeList[*]}
     do
-        git rm -rf --cached $del
-        rm -rm $del
+        sudo git rm -rf --cached "$del"
+        sudo rm -rf "$del"
     done
-fi
+fi                                                                                                   
+
 
