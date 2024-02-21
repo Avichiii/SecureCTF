@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo -l
-if [[ $? -ne 0 ]]
+if [[ $? -ne 1 ]]
 then
     echo "you need sudo previlage"
     exit 1
