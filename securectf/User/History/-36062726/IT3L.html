@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+
+{% block title %} User Profile {% endblock %}
+
+{% block rightnavbar %}
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('logout') }}">Log out</a>
+    </li>
+{% endblock %}
+
+{% block content %}
+
+
+
+<!-- Welcome heading with small text -->
+
+<div class="dashboard_container">
+    <h1>Welcome to your - <label> <b>Dashboard</b></label></h1>
+    <p>Explore your incredible <label id="sub_text">achievements</label></p>
+    <div class="user-logo">
+        <!-- Insert your user logo here -->
+    </div>
+
+
+    <!-- User information including username,bio,social media -->
+
+    <div class="user-info">
+        <p>HiddenQ <label><b>[Warrior]</b></label></p>
+        <p id="bio">Information is Power</p>
+        <!-- <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin" id="linedin"></i></a>
+        <a href="https://www.youtube.com"><i class="fa-brands fa-youtube" id="youtube"></i></a>
+        <a href="https://www.github.com"><i class="fa-brands fa-github" id="github"></i></a>
+        <a href="https://www.medium.com"><i class="fa-brands fa-medium" id="medium"></i></a> -->
+        <div id="icon_area">
+        <ul>
+            <li><a href="#"></a><i class="fa-brands fa-linkedin" id="linedin"></i></li>
+            <li><a href="#"></a><i class="fa-brands fa-youtube" id="youtube"></i></li>
+            <li><a href="#"></a><i class="fa-brands fa-github" id="github"></i></li>
+            <li><a href="#"></a><i class="fa-brands fa-medium" id="medium"></i></li>
+        </ul>
+        </div>
+    </div>
+</div>
+
+
+ <!-- Rank and label HTML -->
+
+<div class="rank-container">
+    <div class="rank-section">
+        <p class="rank-value"><b>10500</b></p>
+        <p class="rank-label">Rank</p>
+    </div>
+    <div class="rank-section">
+        <p class="rank-value"><b>50</b></p>
+        <p class="rank-label">Solved</p>
+    </div>
+    <div class="rank-section">
+        <p class="rank-value"><b>10</b></p>
+        <p class="rank-label">Level</p>
+    </div>
+</div>
+
+
+<!-- Solved Box  HTML -->
+
+<div class="room_level">
+    <h3 class="room_level_txt"> <label>Rooms</label> Completed...</h3>
+</div>
+<div class="solved_challenges">
+    <div class="chlbox1">
+        <div class="box_catagory">Web Exploitation</div>
+        <div class="box_points">10 | points</div>
+        <div class="box_challenge_name">Find Me <i class="fa-regular fa-circle-check fa-lg" style="color: #1fdb5e;"></i> </div>
+        <div class="diff">#Easy</div>
+        <div class="author">Author: HiddenQ</div>
+    </div>
+
+    <div class="chlbox2">
+        <div class="box_catagory">Cryptography</div>
+        <div class="box_points">50 | points</div>
+        <div class="box_challenge_name">Decrypt me$ <i class="fa-regular fa-circle-check fa-lg" style="color: #1fdb5e;"></i></div>
+        <div class="diff">#Hard</div>
+        <div class="author">Author: Avichiii</div>
+    </div>
+
+    <div class="chlbox3">
+        <div class="box_catagory">Forensics</div>
+        <div class="box_points">30 | points</div>
+        <div class="box_challenge_name">Relief =* <i class="fa-regular fa-circle-check fa-lg" style="color: #1fdb5e;"></i> </div>
+        <div class="diff">#Medium</div>
+        <div class="author">Author: Billaboy</div>
+    </div>
+    <div class="chlbox4">
+        <div class="box_catagory">Forensics</div>
+        <div class="box_points">10 | points</div>
+        <div class="box_challenge_name">Docker <i class="fa-regular fa-circle-check fa-lg" style="color: #1fdb5e;"></i></div>
+        <div class="diff">#Easy</div>
+        <div class="author">Author: joni</div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

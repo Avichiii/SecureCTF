@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% block title %} User Profile {% endblock %}
+
+{% block rightnavbar %}
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('logout') }}">Log out</a>
+    </li>
+{% endblock %}
+
+{% block content %}
+
+<!-- html for user profile -->
+
+
+
+<div class="dashboard_container">
+    <h1>Welcome to your Dashboard</h1>
+    <p>Explore your incredible achievements</p>
+    <div class="user-logo">
+        <!-- Insert your user logo here -->
+    </div>
+    <div class="user-info">
+        <p>User: HiddenQ</p>
+        <p>Bio: [Insert Bio here]</p>
+        <!-- Insert social media icons here -->
+    </div>
+</div>
+
+<div class="bar">
+    <div class="section">Rank</div>
+    <div class="section">Solved</div>
+    <div class="section">Level</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
