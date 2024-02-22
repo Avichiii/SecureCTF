@@ -65,7 +65,7 @@ class Ctf(db.Model, UserMixin):
 # category table
 class Category(db.Model, UserMixin):
     id = db.Column(db.Integer(), primary_key=True)
-    category_name = db.Column(db.String(length=50), nullable=False, unique=True)
+    category_name = db.Column(db.String(length=50), nullable=False)
     challenge_id = db.Column(db.Integer(),  db.ForeignKey('ctf.id'))
 
 # forum table

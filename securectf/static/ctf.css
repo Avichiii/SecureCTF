@@ -93,12 +93,12 @@
 .container_challenges {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: flex-start;
     position: relative;
     left: -3%;
     margin-top: 50px;
-    width: 70%;
+    width: 75%;
 }
 
 .box {
@@ -109,8 +109,9 @@
     padding: 20px;
     text-align: center;
     color: #fff;
-    left: 34%;
+    left: 30%;
     margin-bottom: 55px;
+    margin-left: 30px;
 
 }
 
