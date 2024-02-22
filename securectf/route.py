@@ -1,8 +1,8 @@
 from flask import redirect, render_template, request, flash, url_for
 from securectf import app, db
-from securectf.form import Login, Register
+from securectf.form import Login, Register, Upload
 from flask_login import login_user, logout_user, login_required, current_user
-from securectf.models import Users
+from securectf.models import Users, Ctf, Category
 from securectf.joins import Joins
 
 @app.route('/')
@@ -114,7 +114,43 @@ def settings():
 def admin():
     return render_template('admin.html')
 
-@app.route('/upload')
+@app.route('/upload', methods=['GET', 'POST'])
 @login_required
 def upload():
-    return render_template('upload.html')
+    form = Upload()
+    if request.method == 'POST':
+        if form.validate_on_submit():
+            attemted_challenge = Ctf.query.filter_by(challenge_name=form.challenge_name.data).first()
+            flash('working!!!!')
+            if not attemted_challenge:
+                challenge = Ctf(
+                    challenge_name=form.challenge_name.data,
+                    description=form.description.data,
+                    uploaded_user=current_user.username,
+                    difficulty=form.difficulty.data,
+                    points=form.points.data
+                )
+                db.session.add(challenge)
+                db.session.commit()
+
+                # fetching the challenge to add the id in category table
+                challenge_id_ = Ctf.query.filter_by(challenge_name=form.challenge_name.data).first()
+                category = Category(
+                    category_name=form.category.data,
+                    challenge_id=challenge_id_.id
+                )
+                db.session.add(category)
+                db.session.commit()
+
+                flash('Challenge has been added.')
+                return redirect(url_for('upload'))
+
+            else:
+                flash('A Challenge with the same name already exists!')
+                return redirect(url_for('upload'))
+        
+        flash('Something went wrong! Please try again!')
+        return redirect(url_for('home')) 
+      
+    if request.method == 'GET':
+        return render_template('upload.html', form=form)

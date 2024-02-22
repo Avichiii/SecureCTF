@@ -9,14 +9,29 @@
     <div class="submit-text">Submit a <span>Challenges....</span></div>
     <br>
     <!-- <button class="submit-btn">Upload <i class="fa-solid fa-cloud-arrow-up"></i></button> -->
-    <form action="">
-      <input type="text" placeholder="Challenge Name">
-      <input type="text" placeholder="Category">
-      <input type="text" placeholder="Description">
-      <input type="text" placeholder="Difficulty">
-      <input type="text" placeholder="Points">
+    <form method="POST">
+      {{ form.hidden_tag() }}
+
+      <!-- <input type="text" placeholder="Challenge Name"> -->
+      {{ form.challenge_name(type='text', placeholder='Challenge Name') }}
+
+      <!-- <input type="text" placeholder="Category"> -->
+      {{ form.category(type='text', placeholder='Category') }}
+
+      <!-- <input type="text" placeholder="Description"> -->
+      {{ form.description(type='text', placeholder='description') }}
+
+      <!-- <input type="text" placeholder="Difficulty"> -->
+      {{ form.difficulty(type='text', placeholder='difficulty') }}
+
+      <!-- <input type="text" placeholder="Points"> -->
+      {{ form.points(type='text', placeholder='points') }}
+
       <!-- <input type="submit" value="Submit Challenge"> -->
-      <button class="submit-btn">Upload <i class="fa-solid fa-cloud-arrow-up"></i></button>
+      <br>
+      <!-- <button class="submit-btn">Upload <i class="fa-solid fa-cloud-arrow-up"></i></button> -->
+      {{ form.upload(class="submit-btn", placeholder='Upload')}}
+      
     </form>
   </div>
 {% endblock %}
