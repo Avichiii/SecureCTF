@@ -2,8 +2,9 @@ from flask import redirect, render_template, request, flash, url_for
 from securectf import app, db
 from securectf.form import Login, Register, Upload
 from flask_login import login_user, logout_user, login_required, current_user
-from securectf.models import Users, Ctf, Category
+from securectf.models import Users, Ctf, Category, UserProperties, UsersSocial
 from securectf.joins import Joins
+from securectf.ranking import Rank
 
 @app.route('/')
 @app.route('/home')
@@ -28,6 +29,26 @@ def signup():
                 
                 db.session.add(user_signup)
                 db.session.commit()
+                
+                user_id = Users.query.filter_by(username=form.username.data).first()
+                properties = UserProperties(
+                    level=1,
+                    rank=999999,
+                    user_id=user_id.id
+                )
+                db.session.add(properties)
+
+                socials = UsersSocial(
+                    linkedin='#',
+                    github='#',
+                    youtube='#',
+                    website='#',
+                    user_id=user_id.id
+                )
+                db.session.add(socials)
+                
+                db.session.commit()
+
                 login_user(user_signup)
 
                 flash("User has been successfully registered!")
@@ -101,8 +122,38 @@ def community():
 @app.route('/users')
 @login_required
 def users():
-    
-    return render_template('userprofile.html')
+    profile = Joins()
+    user_profile = profile.profile()
+
+    user_rank = Rank()
+    user_rank.ranking()
+
+    leagues = {
+        10: "Hacker",
+        11: "Worrior",
+        12: "Veteran",
+        13: "God"
+    }
+
+    league = 'Amateur' 
+
+    for user_league in leagues.keys():
+        if user_league == user_profile.level:
+            league = leagues[user_league]
+
+
+    solved = len(current_user.completed_challenges)
+    if solved > 0:
+        challenges = profile.challenges()
+        challenges_completed = []
+        for challenge in challenges:
+            for completed_challenge_obj in current_user.completed_challenges:
+                if challenge.challenge_name == completed_challenge_obj.challenge_name:
+                    challenges_completed.append(challenge)
+
+        return render_template('userprofile.html', user_profile=user_profile, challenges=challenges_completed, solved=solved, league=league)
+    else:
+        return render_template('userprofile.html', user_profile=user_profile, challenges=[], solved=solved, league=league)
 
 @app.route('/settings')
 @login_required
@@ -121,7 +172,7 @@ def upload():
     if request.method == 'POST':
         if form.validate_on_submit():
             attemted_challenge = Ctf.query.filter_by(challenge_name=form.challenge_name.data).first()
-            flash('working!!!!')
+
             if not attemted_challenge:
                 challenge = Ctf(
                     challenge_name=form.challenge_name.data,

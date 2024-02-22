@@ -37,7 +37,7 @@ body, html {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background-color: #f3f3f3; /* Placeholder color */
+    /* background-color: #f3f3f3; Placeholder color */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,7 +113,7 @@ body, html {
 }
 .solved_challenges{
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     align-items: center;
     position: relative;
     margin-top: 35px;
@@ -130,37 +130,10 @@ body, html {
     text-align: center;
     color: #fff;
     left: 2.5%;
+    margin-left: 30px;
+    margin-bottom: 20px;
 }
-.chlbox2{
-    width: 350px; /* Increased width */
-    height: 215px;
-    background-color: #1b2f4a;
-    position: relative;
-    padding: 20px;
-    text-align: center;
-    color: #fff;
-    left: 0%;
-}
-.chlbox3{
-    width: 350px; /* Increased width */
-    height: 215px;
-    background-color: #1b2f4a;
-    position: relative;
-    padding: 20px;
-    text-align: center;
-    color: #fff;
-    left: -3%;
-}
-.chlbox4{
-    width: 350px; /* Increased width */
-    height: 215px;
-    background-color: #1b2f4a;
-    position: relative;
-    padding: 20px;
-    text-align: center;
-    color: #fff;
-    left: -5%;
-}
+
 .box_catagory {
     font-size: 14px; /* Small text */
     position: absolute; /* Positioned in the top left corner */
