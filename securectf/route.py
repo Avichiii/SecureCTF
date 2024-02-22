@@ -3,6 +3,7 @@ from securectf import app, db
 from securectf.form import Login, Register
 from flask_login import login_user, logout_user, login_required, current_user
 from securectf.models import Users
+from securectf.joins import Joins
 
 @app.route('/')
 @app.route('/home')
@@ -66,7 +67,25 @@ def logout():
 @app.route('/ctf')
 @login_required
 def ctf():
-    return render_template('ctf.html')
+    join = Joins()
+    # joined table Ctf + Category
+    challenges = join.challenges()
+    return render_template('ctf.html', challenges=challenges)
+
+@app.route('/ctf/<category>')
+@login_required
+def category(category):
+    categories = ['Web Exploitation', 'Cryptography', 'Digital Forensics', 'Binary Exploitation', 'Reverse Engineering', 'Miscellaneous']
+    category_filter = Joins()
+    
+    if category in categories:
+        filtered_challenges = category_filter.categories(category=category)
+        flash(f'Category: {category}')
+        return render_template('ctf.html', challenges=filtered_challenges)
+    
+    else:
+        return redirect(url_for('ctf'))
+
 
 @app.route('/forum')
 @login_required

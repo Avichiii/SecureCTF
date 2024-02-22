@@ -23,45 +23,28 @@
 
 <!--sidebar HTML -->
 <div class="sidebar">
-    <div class="category-heading">Category Filter</div>
-    <div class="category">Web Exploitation</div>
-    <div class="category">Cryptography</div>
-    <div class="category">Digital Forensics</div>
-    <div class="category">Binary Exploitation</div>
-    <div class="category">Reverse Engineering</div>
-    <div class="category">Miscellaneous</div>
+    <div class="category-heading"><a href="{{ url_for('ctf') }}">Category Filter</a></div>
+    <div class="category"><a href="{{ url_for('category', category='Web Exploitation') }}">Web Exploitation</a></div>
+    <div class="category"><a href="{{ url_for('category', category='Cryptography') }}">Cryptography</a></div>
+    <div class="category"><a href="{{ url_for('category', category='Digital Forensics') }}">Digital Forensics</a></div>
+    <div class="category"><a href="{{ url_for('category', category='Binary Exploitation') }}">Binary Exploitation</a></div>
+    <div class="category"><a href="{{ url_for('category', category='Reverse Engineering') }}">Reverse Engineering</a></div>
+    <div class="category"><a href="{{ url_for('category', category='Miscellaneous') }}">Miscellaneous</a></div>
 </div>
 
 <!--Challenge box HTML -->
 
 <div class="container_challenges">
-    <div class="box">
-        <div class="catagory">Web Exploitation</div>
-        <div class="points">10 | points</div>
-        <div class="challenge_name">Find Me../../..</div>
-        <div class="diff">#Easy</div>
-        <button class="start-button">Start</button>
-        <div class="author">Author: HiddenQ</div>
-    </div>
-
-    <div class="box1">
-        <div class="catagory">Cryptography</div>
-        <div class="points">50 | points</div>
-        <div class="challenge_name">Decrypt me$</div>
-        <div class="diff">#Hard</div>
-        <button class="start-button">Start</button>
-        <div class="author">Author: Avichiii</div>
-    </div>
-
-    <div class="box2">
-        <div class="catagory">Forensics</div>
-        <div class="points">30 | points</div>
-        <div class="challenge_name">Relief =*</div>
-        <div class="diff">#Medium</div>
-        <button class="start-button">Start</button>
-        <div class="author">Author: Billaboy</div>
-    </div>
+    {% for challenge in challenges %}
+        <div class="box">
+            <div class="catagory">{{ challenge.category_name }}</div>
+            <div class="points">{{ challenge.points }} | points</div>
+            <div class="challenge_name">{{ challenge.challenge_name }}</div>
+            <div class="diff">{{ challenge.difficulty }}</div>
+            <button class="start-button">Start</button>
+            <div class="author">Author: {{ challenge.uploaded_user }}</div>
+        </div>
+    {% endfor %}
 </div>
-
 
 {% endblock %}

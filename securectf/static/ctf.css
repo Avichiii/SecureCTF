@@ -60,6 +60,12 @@
     font-size: 18px;
 }
 
+.category-heading a {
+    text-decoration: none;
+    font-weight: inherit;
+    color: inherit;
+}
+
 .category {
     background-color: #121926;
     color: #a5a7ab;
@@ -71,6 +77,12 @@
     transition: color 0.3s ease;
 }
 
+.category a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Use the default text color */
+    font-weight: inherit; /* Use the default font weight */
+}
+
 .category:hover{
     color: #9fef00;
 
@@ -78,20 +90,19 @@
 
 /* Challenges Box CSS */
 
-
-.container_challenges{
+.container_challenges {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     position: relative;
     left: -3%;
     margin-top: 50px;
     width: 70%;
 }
 
-
 .box {
-    width: 450px; /* Increased width */
+    width: calc(33.33% - 30px); /* Three boxes in a row with margin */
     height: 260px;
     background-color: #1b2f4a;
     position: relative;
@@ -99,27 +110,14 @@
     text-align: center;
     color: #fff;
     left: 34%;
+    margin-bottom: 55px;
+
 }
-.box1{
-    width: 450px; /* Increased width */
-    height: 260px;
-    background-color: #1b2f4a;
-    position: relative;
-    padding: 20px;
-    text-align: center;
-    color: #fff;
-    left: 38%;
+
+.box:nth-child(3n) {
+    margin-right: 0; /* Remove margin for the last box in each row */
 }
-.box2{
-    width: 450px; /* Increased width */
-    height: 260px;
-    background-color: #1b2f4a;
-    position: relative;
-    padding: 20px;
-    text-align: center;
-    color: #fff;
-    left: 42%;
-}
+
 .catagory {
     font-size: 14px; /* Small text */
     position: absolute; /* Positioned in the top left corner */
