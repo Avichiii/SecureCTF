@@ -1,4 +1,3 @@
-from operator import length_hint
 from securectf import db, login_manager
 from flask_login import UserMixin
 from securectf import bcrypt
@@ -57,8 +56,9 @@ class Ctf(db.Model, UserMixin):
     challenge_name = db.Column(db.String(length=20), nullable=False, unique=True)
     points = db.Column(db.Integer(), nullable=False)
     description = db.Column(db.Integer(), nullable=False)
-    uploaded_user = db.Column(db.String(length=50), unique=True, nullable=False)
-
+    uploaded_user = db.Column(db.String(length=50), nullable=False)
+    difficulty = db.Column(db.String(length=6), nullable=False)
+    
     def __str__(self) -> str:
         return f'Challenge: {self.challenge_name}'
     
