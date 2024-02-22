@@ -37,7 +37,7 @@ body, html {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background-color: #ccc; /* Placeholder color */
+    background-color: #f3f3f3; /* Placeholder color */
     display: flex;
     justify-content: center;
     align-items: center;

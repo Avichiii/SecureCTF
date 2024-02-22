@@ -83,3 +83,13 @@ def community():
 @login_required
 def users():
     return render_template('userprofile.html')
+
+@app.route('/settings')
+@login_required
+def settings():
+    return render_template('settings.html')
+
+@app.route('/admin')
+@login_required
+def admin():
+    return render_template('admin.html')
