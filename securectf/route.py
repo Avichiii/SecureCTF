@@ -93,3 +93,8 @@ def settings():
 @login_required
 def admin():
     return render_template('admin.html')
+
+@app.route('/upload')
+@login_required
+def upload():
+    return render_template('upload.html')
