@@ -63,3 +63,17 @@ class Joins(object):
         for user in users:
             if user.username == current_user.username:
                 return user
+        
+    def profiles(self):
+        users = db.session.query(
+            Users.username,
+            UserProperties.bio,
+            UserProperties.level,
+            UserProperties.rank,
+            UsersSocial.linkedin,
+            UsersSocial.github,
+            UsersSocial.youtube,
+            UsersSocial.website,
+        ).join(UserProperties, Users.id == UserProperties.user_id).join( UsersSocial, Users.id == UsersSocial.user_id )
+
+        return users

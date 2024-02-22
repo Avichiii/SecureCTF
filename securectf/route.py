@@ -4,6 +4,7 @@ from securectf.form import Login, Register, Upload
 from flask_login import login_user, logout_user, login_required, current_user
 from securectf.models import Users, Ctf, Category, UserProperties, UsersSocial
 from securectf.joins import Joins
+from securectf.ranking import Rank
 
 @app.route('/')
 @app.route('/home')
@@ -123,6 +124,9 @@ def community():
 def users():
     profile = Joins()
     user_profile = profile.profile()
+
+    user_rank = Rank()
+    user_rank.ranking()
 
     leagues = {
         10: "Hacker",
