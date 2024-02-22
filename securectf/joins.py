@@ -1,6 +1,7 @@
 from securectf.models import Users, Ctf, Category, UserProperties, UsersSocial
 from securectf.models import Forum, Community
 from securectf import db
+from flask_login import current_user
 
 class Joins(object):
     def __init__(self) -> None:
@@ -44,3 +45,21 @@ class Joins(object):
         
         return filterd_challenges
 
+
+    def profile(self):
+        users = db.session.query(
+            Users.username,
+            Users.completed_challenges,
+            UserProperties.bio,
+            UserProperties.level,
+            UserProperties.rank,
+            UsersSocial.linkedin,
+            UsersSocial.github,
+            UsersSocial.youtube,
+            UsersSocial.website,
+        ).join(UserProperties, Users.id == UserProperties.user_id).join( UsersSocial, Users.id == UsersSocial.user_id )
+        # for multiple table joins, we have to specify the tables like this
+
+        for user in users:
+            if user.username == current_user.username:
+                return user
